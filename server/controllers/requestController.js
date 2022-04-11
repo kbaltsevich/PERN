@@ -1,18 +1,22 @@
 const { User, Request } = require("../models/model");
 const ApiError = require("../error/ApiError");
+const jwt = require("jsonwebtoken");
 
 class RequsetController {
   async create(req, res) {
-    const { userId, datedata } = req.body;
+    const userId = req.user.id;
     const authorRequest = await User.findOne({ where: { id: userId } });
     if (!authorRequest) {
       return next(ApiError.badRequest("Неавторизированы"));
     }
-    const createRequest = await Request.create({ userId, datedata });
+    const createRequest = await Request.create({ userId, ...req.body });
     return res.json({ message: "OK!" });
   }
   async getAll(req, res) {
-    const { userId } = req.body;
+    const userId = req.user.id;
+    if (!userId) {
+      return next(ApiError.badRequest("Неавторизированы"));
+    }
     const authorRequest = await User.findOne({ where: { id: userId } });
     if (!authorRequest) {
       return next(ApiError.badRequest("Неавторизированы"));

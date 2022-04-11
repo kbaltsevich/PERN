@@ -24,6 +24,17 @@ const Request = sequelize.define("request", {
     defaultValue: "secretaryemail@test.com",
   },
   userId: { type: DataTypes.INTEGER },
+  purpose_of_the_council: { type: DataTypes.STRING },
+  birth_date: { type: DataTypes.STRING },
+  gender: { type: DataTypes.STRING },
+  tnm: { type: DataTypes.STRING },
+  disease_amnesia: { type: DataTypes.STRING },
+  date_diagnosis: { type: DataTypes.STRING },
+  current_treatment: { type: DataTypes.STRING },
+  info_comorbidities: { type: DataTypes.STRING },
+  intolerance: { type: DataTypes.STRING },
+  ecog: { type: DataTypes.STRING },
+  complaints_now: { type: DataTypes.STRING },
 });
 
 module.exports = {
