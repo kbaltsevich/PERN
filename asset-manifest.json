@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/PERN/static/css/main.38be36b0.css",
-    "main.js": "/PERN/static/js/main.3eee6605.js",
+    "main.js": "/PERN/static/js/main.623d322e.js",
     "index.html": "/PERN/index.html",
     "main.38be36b0.css.map": "/PERN/static/css/main.38be36b0.css.map",
-    "main.3eee6605.js.map": "/PERN/static/js/main.3eee6605.js.map"
+    "main.623d322e.js.map": "/PERN/static/js/main.623d322e.js.map"
   },
   "entrypoints": [
     "static/css/main.38be36b0.css",
-    "static/js/main.3eee6605.js"
+    "static/js/main.623d322e.js"
   ]
 }
